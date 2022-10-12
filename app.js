@@ -240,7 +240,7 @@ const p1 = object1.filter((e) => { return  e.company.name === 'Robel-Corkery'; }
 console.log(p1[0].name)
   
 // Sort users by username
-console.log(object1.sort((a, b) => { return a.username .localeCompare( b.username) }));
+console.log(object1.sort((a, b) => { return a.username.localeCompare( b.username) }));
   
 //Log all the users whose lat is greater than 0
 const sortByL  = object1.filter((a) => { return a.address.geo.lat > 0});
@@ -251,5 +251,5 @@ console.log(sortByL);
 object1.forEach((prop) => { return prop.image="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"; });
 
 // // Delete a user with the username ‘Elwyn.Skiles’
-object1.filter((obj) => {return delete obj.username === "Elwyn.Skiles"} );
-console.log(object1);
+const newObject = object1.filter((obj) => obj.username !== "Elwyn.Skiles");
+console.log(newObject);
